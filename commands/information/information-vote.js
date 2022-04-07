@@ -10,7 +10,7 @@ module.exports = {
         .setTitle('DISCORD BOT VOTE LINKS')
         .addField(`DiscordBotList:`, `**[Click Here](https://discordbotlist.com/bots/reborn/upvote)**`, true)
         .addField(`TopGG:`, `**[Click Here](https://top.gg/bot/920487181137625139/vote)**`, true)
-        .addField(`Discord Bot Invite Link:`, `**[Click Here](https://discord.com/api/oauth2/authorize?client_id=920487181137625139&permissions=1488172220151&scope=bot)**`, true)
+        .addField(`Discord Bot Invite Link:`, `**[Click Here](https://discord.com/api/oauth2/authorize?client_id=920487181137625139&permissions=1401732459767&scope=bot)**`, true)
         .setColor('RANDOM')
         .setTimestamp()
 
