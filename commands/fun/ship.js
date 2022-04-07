@@ -119,6 +119,7 @@ module.exports = {
         } else if(args[0]) {
             let RN = Math.floor(Math.random() * 100)
             const member = message.mentions.members.first() || message.guild.members.cache.get(args[0])
+            if(!member) return message.reply("Mention a member")
             if(RN > 50) {
                 const Canvas = require('canvas')
                 const path = require('path')
