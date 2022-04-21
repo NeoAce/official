@@ -15,7 +15,7 @@ module.exports = {
         })
 
         if(!bal) {
-            return message.reply(user.username + `Looks like you dont have any records yet. Create your account now by typing \`${prefix}start\``)
+            return message.reply(user.username + ` Looks like you dont have any records yet. Create your account now by typing \`${prefix}start\``)
         }
 
         const total = parseInt(bal.wallet + bal.bank)

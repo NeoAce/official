@@ -25,7 +25,7 @@ module.exports = {
                     data.save()
                     message.channel.send(user.username + ` begged and obtained $${amount.toLocaleString()}.`)
                 } else {
-                    return message.channel.send(`Looks like you dont have any records yet. Create your account now by typing \`${prefix}start\``)
+                    return message.channel.send(` Looks like you dont have any records yet. Create your account now by typing \`${prefix}start\``)
                 }
             })
         } else {

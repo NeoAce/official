@@ -14,7 +14,7 @@ module.exports = {
             .setTitle("Casino Give")
             .setTimestamp()
             .setColor('RANDOM')
-            .addField(`To use this command, type:`, `${prefix}give <@member>`)
+            .addField(`To use this command, type:`, `${prefix}give <@member> <amount>`)
 
             message.channel.send({embeds: [embed]})
         } else if(args[0]) {
@@ -66,6 +66,6 @@ module.exports = {
                 data.save()
             }
         })
-        }
+        } 
     }
 }

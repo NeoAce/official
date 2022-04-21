@@ -19,7 +19,7 @@ module.exports = {
                 data.save()
                 message.channel.send(`You claimed your daily coins worth of $${amount.toLocaleString()}`)
             } else {
-                return message.channel.send(`Looks like you dont have any records yet. Create your account now by typing \`${prefix}start\``)
+                return message.channel.send(` Looks like you dont have any records yet. Create your account now by typing \`${prefix}start\``)
             }
         })  
     }
