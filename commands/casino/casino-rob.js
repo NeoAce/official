@@ -31,7 +31,7 @@ module.exports = {
                     data.wallet += amount
                     data.save()
                 } else {
-                    message.reply(`Looks like you dont have any records yet. Create your account now by typing \`${prefix}start\``)
+                    return message.reply(`Looks like you dont have any records yet. Create your account now by typing \`${prefix}start\``)
                 }
             })
     
@@ -77,7 +77,7 @@ module.exports = {
                         data.save()
                         message.channel.send({embeds: [embed]})
                     } else {
-                        message.reply(`Looks like you dont have any records yet. Create your account now by typing \`${prefix}start\``)
+                       return message.reply(`Looks like you dont have any records yet. Create your account now by typing \`${prefix}start\``)
                     }
                 })
 

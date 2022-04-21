@@ -12,7 +12,6 @@ module.exports = {
         .setDescription(`Start playing casino by typing ${prefix}start`)
         .addField("Moderators Commands:", "`add, add-amount`")
         .addField("Members Commands:", "`balance, beg, daily, give, weekly, work, rob, deposit, withdraw, leaderboard`")
-        .addField("Casino Gambling:", "`conflip, slotmachine`")
         .setColor('RANDOM')
         .setTimestamp()
 
