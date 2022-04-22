@@ -1,12 +1,12 @@
-const { MessageEmbed, Permissions } = require('discord.js')
-const economy = require('../../Schemas/casinoSchema/main-schema')
+const { MessageEmbed, Permissions } = require('discord.js');
 
 module.exports = {
-    name: "testing",
-    aliases: ["test"],
+    name: "add-role-all",
+    aliases: [""],
+    description: "Moderation Add role to all",
     cooldown: 0,
-    description: "To test something",
-    async execute(client, message, args, prefix) {
+    usage: "add-role-all",
+    async execute(client, message, args) {
         if(!message.member.permissions.has(Permissions.FLAGS.ADMINISTRATOR)) return message.reply("You can't use this command.")
         if(!message.guild.me.permissions.has(Permissions.FLAGS.MANAGE_ROLES)) return message.reply("I can't use this command, enable `MANAGE_ROLES` for me.")
         let role = message.mentions.roles.first() || message.guild.roles.cache.get(args[0]) 

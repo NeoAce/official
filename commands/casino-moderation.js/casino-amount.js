@@ -19,7 +19,7 @@ module.exports = {
     
                 message.channel.send({embeds: [embed]})
             } else if(args[1] === 'wallet') {
-                const role = message.mentions.roles.first()
+                const role = message.mentions.roles.first() || message.guild.roles.cache.get(args[0])
                 if(!role) role = message.guild.roles.cache.find(role => role.name == args[0]) || message.guild.roles.cache.find(role => role.id == args[0])
                 const amount = parseFloat(args[2])
                 if(!role) return message.reply("What role do you wanted to give some extra credit?")
@@ -47,7 +47,7 @@ module.exports = {
                     message.channel.send({embeds: [embed]})
 
             } else if(args[1] === 'bank') {
-                const role = message.mentions.roles.first()
+                const role = message.mentions.roles.first() || message.guild.roles.cache.get(args[0])
                 if(!role) role = message.guild.roles.cache.find(role => role.name == args[0]) || message.guild.roles.cache.find(role => role.id == args[0])
                 const amount = parseFloat(args[2])
                 if(!role) return message.reply("What role do you wanted to give some extra credit?")
