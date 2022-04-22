@@ -102,6 +102,18 @@ module.exports = {
             .setTimestamp()
 
             message.channel.send({embeds: [embed]})
+        } else if(args[0] === "ceb" || args[0] ==="cebuano") {
+            const words = args.slice(1).join(" ")
+            if(!words) return message.reply("Specify a word to translate.")
+
+            const translated = await translate(words, {to: 'ceb'});
+            const embed = new MessageEmbed()
+            .addField('Given Word:', `${words}`)
+            .addField("Translated:", `${translated.text}`)
+            .setColor('RANDOM')
+            .setTimestamp()
+
+            message.channel.send({embeds: [embed]})
         }
     }
 }
