@@ -15,8 +15,8 @@ module.exports = {
             
             message.channel.send({embeds: [embed]})
         } else if(args[0] === "random") {
-            const member = message.guild.members.cache.random()
-            const member1 = message.guild.members.cache.random()
+            const member = message.guild.members.cache.filter((m) => !m.user.bot).random()
+            const member1 = message.guild.members.cache.filter((m) => !m.user.bot).random()
 
             let RN = Math.floor(Math.random() * 100)
 
@@ -119,9 +119,7 @@ module.exports = {
             }
         } else if(args[0] === "me") {
             if(args[1] === "random") {
-            const member1 = message.guild.members.cache.random()
-
-            message.guild.members.cache.map((m) => !m.user.bot);
+            const member1 = message.guild.members.cache.filter((m) => !m.user.bot).random()
 
             let RN = Math.floor(Math.random() * 100)
 
