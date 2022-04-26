@@ -42,13 +42,5 @@ module.exports = {
         .setTimestamp()
         
         message.channel.send({embeds: [embed]})
-        
-        const embed1 = new MessageEmbed()
-        .setTitle("YOU HAVE BEEN REPORTED")
-        .setDescription(`${reason}`)
-        .setColor('RANDOM')
-        .setTimestamp()
-
-        target.send({embeds: [embed1]})
     }
 }
