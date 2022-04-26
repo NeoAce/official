@@ -3,7 +3,7 @@ const warns = require('../../Schemas/warningFileSchema')
 
 module.exports = {
     name: "warning",
-    aliases: [""],
+    aliases: ["warn"],
     description: "Warn a Person",
 
     async execute(client, message, args) {
@@ -12,6 +12,8 @@ module.exports = {
 
         const target = message.mentions.members.first() || message.guild.members.cache.get(args[0])
         const reason = args.slice(1).join(" ") || "No Reason"
+
+        if(!target) return message.reply("Who are you going to warn?")
 
         warns.findOne({
             guildID: message.guild.id,
