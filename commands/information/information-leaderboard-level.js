@@ -11,7 +11,7 @@ module.exports = {
         if (Leaderboard.length < 1) return reply("Nobody's in leaderboard yet.");
 
         const leaderboard = await Levels.computeLeaderboard(client, Leaderboard, true);
-        const lb = leaderboard.map(e => `${e.position}. ${e.username}#${e.discriminator}\nLevel: ${e.level}\nXP: ${e.xp.toLocaleString()}`);
+        const lb = leaderboard.map(e => `**#${e.position}** ${e.username}#${e.discriminator}\nLevel: \`${e.level.toLocaleString()}\`\nXP: \`${e.xp.toLocaleString()}\``)
         const leaderboardembed = new MessageEmbed()
         .setTitle("**LEADERBOARD**")
         .setDescription(`${lb.join("\n\n")}`)
