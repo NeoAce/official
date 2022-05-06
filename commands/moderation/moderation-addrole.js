@@ -10,7 +10,7 @@ module.exports = {
         if(!message.member.permissions.has(Permissions.FLAGS.MANAGE_ROLES)) return message.reply("You can't use this command")
         if(!message.guild.me.permissions.has(Permissions.FLAGS.MANAGE_ROLES)) return message.reply("I can't use this command!")
     
-        const role = message.guild.roles.cache.find(role => role.id === `${args[1]}`)
+        const role = message.guild.roles.cache.find(role => role.id === `${args[1]}`) || message.mentions.roles.first(1)[2]
         const target = message.mentions.members.first() || await message.guild.members.cache.get(args[0])
 
         if(!target) return message.reply("Who are you going to add role?")
